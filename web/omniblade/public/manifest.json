@@ -1,0 +1,29 @@
+{
+	"manifest_version": 3,
+	"name": "Floating Utility Extension",
+	"version": "1.0",
+	"description": "Clipboard, Weather, Dictionary, Search – in a floating panel.",
+	"action": {
+		"default_popup": "index.html",
+		"default_icon": {
+			"16": "icon.png",
+			"48": "icon.png",
+			"128": "icon.png"
+		}
+	},
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": ["storage", "clipboardRead", "activeTab", "scripting"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["inject.js"]
+		}
+	]
+}
