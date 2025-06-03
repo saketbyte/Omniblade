@@ -56,16 +56,17 @@ function Dictionary() {
 			{/* Header */}
 			<input
 				type='text'
-				placeholder='Search a word'
+				placeholder='Dictionary - Search a word'
 				onChange={(e) => setKeyword(e.target.value)}
 				className='
                         bg-white border-2 border-black text-[8px]
-                        focus:outline-none focus:shadow-[3px_3px_0px_0px_black] p-1 mr-2'
+                        focus:outline-none focus:shadow-[3px_3px_0px_0px_black] w-3/4 p-1 mr-2'
 			/>
 
 			<button className='btn-brutal m-2' onClick={() => fetchMeaning(keyword)}>
 				🔍
 			</button>
+
 			<div className='flex flex-col items-start '>
 				<div className='text-[14px] mt-2 mb-2'>
 					{word}

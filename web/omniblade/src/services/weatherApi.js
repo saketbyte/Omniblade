@@ -1,4 +1,4 @@
-const APIKEY = "7e3e6f0998f3423d8ba120741252505";
+const APIKEY = import.meta.env.VITE_API_KEY;
 
 const WEATHER_API_URL = `http://api.weatherapi.com/v1/forecast.json`;
 
